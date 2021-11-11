@@ -9,9 +9,14 @@ const express = require("express")
 const morgan = require("morgan")
 const bodyParser = require('body-parser')
 const {check, validationResult} = require("express-validator")
+const Mailgun = require("mailgun.js")
+const formData = require("form-data")
+const Recaptcha = require("express-recaptcha").RecaptchaV2
 require("dotenv").config()
 
 const app = express()
+const mailgun = new Mailgun(formData)
+
 
 app.use(morgan("dev"))
 app.use(express.json())
@@ -39,16 +44,20 @@ const validation = [
 
 
 const handlePostRequest = (request, response) => {
-
+  const errors = validationResult(request)
   response.append("access-control-allow-origin", "*")
   console.log(request.body)
   return response.json("email successfully sent")
+
+  if(errors.isEmpty() === false) {
+    const currentError = errors.array()[0]
+  }
 
 }
 
 indexRoute.route("/")
   .get(handleGetRequest)
-  .post(validation, handlePostRequest)
+  .post(validation, recaptcha.verify, handlePostRequest)
 
 app.use("/apis", indexRoute)
 
