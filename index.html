@@ -9,7 +9,7 @@
     <title>Jamie Davis Website</title>
 </head>
 
-<body class="bg-dark">
+<body class="bg-black">
 
 <!--NAVBAR-->
 
@@ -29,13 +29,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="#">Github</a>
+                        <a class="nav-link text-warning" href="https://github.com/JamieDavisDevBase">Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="#">LinkedIn</a>
+                        <a class="nav-link text-warning" href="https://www.linkedin.com/in/jamie-davis-jddb/">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" href="#">StackOverflow</a>
+                        <a class="nav-link text-warning" href="https://stackoverflow.com/users/17182888/jamie-davis">StackOverflow</a>
                     </li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
 <!--Welcome-->
 
     <div class="container-lg">
-        <p class="text-light">Welcome to my personal website, Don't forget to check out my LinkedIn and Github at the bottom of the page!</p>
+        <p class="text-light">Welcome to my personal website, don't forget to check out my LinkedIn profile and Github account above and at the bottom of the page!</p>
         <img id="sunflower" src="./imgs/sunflowers.jpg" class="img-fluid mx-auto d-block rounded-3" alt="Jamie and Amanda next to large sunflower." width="1296" height="972">
     </div>
 
@@ -102,7 +102,7 @@
 
     <div class="container-lg">
         <div class="row">
-            <div class="col-md-6 text-light">
+            <div class="col-md-6 text-light d-flex flex-direction: row align-items-center">
                 <form action="http://localhost:4200/apis" id="contact" method="post" novalidate>
                     <h1 class="d-flex justify-content-center">Contact Me!</h1>
                     <div class="col-6 mb-3">
@@ -133,13 +133,19 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-4">
-                <img src="./imgs/linkedin.png" alt="linkedin logo">
+                <a href="https://www.linkedin.com/in/jamie-davis-jddb/">
+                <img src="./imgs/linkedin.png" class="mb-5 mx-auto d-flex justify-content-center" alt="linkedin logo" width="25%">
+                </a>
             </div>
             <div class="col-4">
-                <img src="./imgs/github.png" alt="github logo">
+                <a href="https://stackoverflow.com/users/17182888/jamie-davis">
+                <img src="./imgs/stack.png" class="mb-5 mx-auto d-flex justify-content-center" alt="stack overflow logo" width="25%">
+                </a>
             </div>
             <div class="col-4">
-                <img src="./imgs/stack.png" alt="stack overflow logo">
+                <a href="https://github.com/JamieDavisDevBase">
+                <img src="./imgs/github.png" class="mb-5 mx-auto d-flex justify-content-center" alt="github logo" width="25%">
+                </a>
             </div>
         </div>
     </div>
