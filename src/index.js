@@ -16,8 +16,8 @@ require("dotenv").config()
 
 const app = express()
 const mailgun = new Mailgun(formData)
-
-
+const recaptcha = new Recaptcha(process.env.RECAPTCHA_SITE_KEY, process.env.RECAPTCHA_SECRET_KEY)
+const mailgunClient = mailgun.client({username: "api", key: process.env.MAILGUN_API_KEY})
 app.use(morgan("dev"))
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -44,20 +44,44 @@ const validation = [
 
 
 const handlePostRequest = (request, response) => {
+
+
   const errors = validationResult(request)
   response.append("access-control-allow-origin", "*")
   console.log(request.body)
-  return response.json("email successfully sent")
 
   if(errors.isEmpty() === false) {
     const currentError = errors.array()[0]
+    return response.send(`<div class="alert alert-danger" role="alert><strong>Oh snap!</strong> ${currentError.msg}</div>`)
   }
+
+  if (request.recaptch.error) {
+    return response.send(
+      `<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong>There was an error with Recaptcha please try again</div>`
+    )
+  }
+  const {email, name, message} = request.body
+
+  mailgunClient.messages.create(
+    process.env.MAILGUN_DOMAIN,
+    {
+      to: process.env.MAILGUN_RECIPIENT,
+      from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+      subject: `${email}`,
+      text:message
+
+    }
+  ).then(()=> {
+    response.send(`<div class='alert alert-success' role='alert'>Email sent successfully</div>`)
+  }).catch(error=> {
+    response.send(`<div class="alert alert-danger" role="alert"><strong>Uh Oh</strong>${error}</div>`)
+  })
 
 }
 
 indexRoute.route("/")
   .get(handleGetRequest)
-  .post(validation, recaptcha.verify, handlePostRequest)
+  .post(validation, recaptcha.middleware.verify, handlePostRequest)
 
 app.use("/apis", indexRoute)
 
@@ -65,5 +89,6 @@ app.listen(4200, () => {
   console.log("Express server successfully built")
 })
 
-
+// http://my-website.com my domain
+// http://mallorys-website.com a sus website
 
