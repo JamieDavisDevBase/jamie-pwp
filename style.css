@@ -60,7 +60,7 @@ body {
 
 .fa-docker {
     color: deepskyblue;
-    font-size: 150px;
+    font-size: 130px;
 }
 
 .fa-figma {
@@ -80,7 +80,8 @@ body {
 
 .fa-discord {
     color: purple;
-    font-size: 150px;
+    font-size: 135px;
+    padding-top: 12px;
 }
 
 .fa-file-word {
@@ -100,7 +101,8 @@ body {
 
 .fa-terminal {
     color: snow;
-    font-size: 150px;
+    font-size: 100px;
+    padding-top: 20px;
 }
 
 .fa-android {
