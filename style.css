@@ -1,6 +1,150 @@
+
+/*Background*/
+
 body {
-    background-image: url("./imgs/sunset.jpg");
+    background-image: url("./imgs/forest.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom;
+}
+
+/*Icon Links*/
+
+.icon {
+    color: rgb(246, 193, 0);
+    font-size: 80px;
+    margin-bottom: 40px;
+
+}
+.icon:hover {
+    color: dodgerblue;
+    font-size: 80px;
+}
+
+/*Icons*/
+
+.fa-js-square {
+    color: yellow;
+    font-size: 150px;
+}
+
+.fa-html5 {
+    color: darkorange;
+    font-size: 150px;
+}
+
+.fa-css3-alt {
+    color: dodgerblue;
+    font-size: 150px;
+}
+
+.fa-bootstrap {
+    color: rebeccapurple;
+    font-size: 150px;
+}
+
+.fa-git-alt {
+    color: orangered;
+    font-size: 150px;
+}
+
+.fa-react {
+    color: cyan;
+    font-size: 150px;
+}
+
+.fa-node-js {
+    color: yellowgreen;
+    font-size: 150px;
+}
+
+.fa-docker {
+    color: deepskyblue;
+    font-size: 150px;
+}
+
+.fa-figma {
+    color: whitesmoke;
+    font-size: 150px;
+}
+
+.fa-npm {
+    color: red;
+    font-size: 150px;
+}
+
+.fa-steam {
+    color: darkblue;
+    font-size: 150px;
+}
+
+.fa-discord {
+    color: purple;
+    font-size: 150px;
+}
+
+.fa-file-word {
+    color: royalblue;
+    font-size: 150px;
+}
+
+.fa-file-powerpoint {
+    color: lightcoral;
+    font-size: 150px;
+}
+
+.fa-file-excel {
+    color: seagreen;
+    font-size: 150px;
+}
+
+.fa-terminal {
+    color: snow;
+    font-size: 150px;
+}
+
+.fa-android {
+    color: limegreen;
+    font-size: 150px;
+}
+
+.fa-linux {
+    color: black;
+    font-size: 150px;
+    background-color: white;
+    width: 155px;
+    border-radius: 10%;
+    padding-top: 2px;
+    padding-bottom: 1px;
+
+}
+
+.fa-windows {
+    color: deepskyblue;
+    font-size: 150px;
+}
+
+.fa-apple {
+    color: darkred;
+    font-size: 150px;
+}
+
+.fa-chrome {
+    color: #ffc208;
+    font-size: 150px;
+}
+
+.fa-firefox-browser {
+    color: orangered;
+    font-size: 150px;
+}
+
+.fa-edge {
+    color: midnightblue;
+    font-size: 150px;
+}
+
+.fa-safari {
+    color: lightskyblue;
+    font-size: 150px;
 }
