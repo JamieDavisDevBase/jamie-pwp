@@ -37,8 +37,9 @@ const validation = [
   check("email", "Please provide a valid email")
     .isEmail(),
   check("message", "A message shorter than 2000 characters is required")
+    .trim()
     .escape()
-    .isLength({min:1, max:2000})
+    .isLength({min:10, max:2000})
 
 ]
 
@@ -55,26 +56,28 @@ const handlePostRequest = (request, response) => {
     return response.send(`<div class="alert alert-danger" role="alert><strong>Oh snap!</strong> ${currentError.msg}</div>`)
   }
 
-  if (request.recaptch.error) {
+  if (request.recaptcha.error) {
     return response.send(
       `<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong>There was an error with Recaptcha please try again</div>`
     )
   }
   const {email, name, message} = request.body
 
+  const mailgunData = {
+    to: [process.env.MAIL_RECIPIENT],
+    from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+    subject: `${email}`,
+    text:message
+
+  }
+
   mailgunClient.messages.create(
     process.env.MAILGUN_DOMAIN,
-    {
-      to: process.env.MAILGUN_RECIPIENT,
-      from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-      subject: `${email}`,
-      text:message
-
-    }
+    mailgunData
   ).then(()=> {
     response.send(`<div class='alert alert-success' role='alert'>Email sent successfully</div>`)
   }).catch(error=> {
-    response.send(`<div class="alert alert-danger" role="alert"><strong>Uh Oh</strong>${error}</div>`)
+    response.send(`<div class="alert alert-danger" role="alert"><strong>Oh snap mailgun error!</strong>${error}</div>`)
   })
 
 }
