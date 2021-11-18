@@ -45,7 +45,7 @@ body {
 
 .fa-git-alt {
     color: orangered;
-    font-size: 150px;
+    font-size: 160px;
 }
 
 .fa-react {
@@ -53,9 +53,11 @@ body {
     font-size: 150px;
 }
 
-.fa-node-js {
+.fa-node {
     color: yellowgreen;
-    font-size: 150px;
+    font-size: 140px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .fa-docker {
@@ -73,27 +75,6 @@ body {
     font-size: 150px;
 }
 
-.fa-steam {
-    color: darkblue;
-    font-size: 150px;
-}
-
-.fa-discord {
-    color: purple;
-    font-size: 135px;
-    padding-top: 12px;
-}
-
-.fa-file-word {
-    color: royalblue;
-    font-size: 150px;
-}
-
-.fa-file-powerpoint {
-    color: lightcoral;
-    font-size: 150px;
-}
-
 .fa-file-excel {
     color: seagreen;
     font-size: 150px;
@@ -103,11 +84,6 @@ body {
     color: snow;
     font-size: 100px;
     padding-top: 20px;
-}
-
-.fa-android {
-    color: limegreen;
-    font-size: 150px;
 }
 
 .fa-linux {
