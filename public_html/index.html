@@ -17,11 +17,35 @@
     <nav class="navbar navbar-expand-lg navbar-dark rounded-3 py-1 my-2 mx-2">
         <div class="container-lg">
             <span class="navbar-brand fs-2 fw-bold my-auto me-2 text-warning">Jamie Davis</span>
-            <div class="dropdown me-auto">
-                <button class="btn text-warning border-3 border-warning" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <!--Modal Button-->
+
+                <button type="button" class="btn text-warning border-3 border-warning me-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Resume
                 </button>
+
+        <!--Modal-->
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">My Resume</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./imgs/resume%20screenshot.png" alt="Jamie's Resume" width="100%" height="100%">
+                        </div>
+                        <div class="modal-footer">
+                            <a href="./imgs/JamieResume.pdf" download="JamieResume.pdf">
+                            <button type="button" class="btn btn-primary">Download</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <button class="navbar-toggler border-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span id="target" class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
