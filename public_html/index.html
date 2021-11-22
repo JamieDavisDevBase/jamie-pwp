@@ -14,13 +14,13 @@
 
 <!--NAVBAR-->
 
-    <nav class="navbar navbar-expand-lg navbar-dark rounded-3 py-1 my-2 mx-2">
+    <nav class="navbar navbar-expand-lg navbar-dark py-1 my-2 mx-2">
         <div class="container-lg">
             <span class="navbar-brand fs-2 fw-bold my-auto me-2 text-warning">Jamie Davis</span>
 
             <!--Modal Button-->
 
-                <button type="button" class="btn text-warning border-3 border-warning me-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button id="resume" type="button" class="btn text-warning border-3 border-warning me-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Resume
                 </button>
 
@@ -46,9 +46,9 @@
             </div>
 
 
-            <button class="navbar-toggler border-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span id="target" class="navbar-toggler-icon"></span>
+            <button id="toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="hover collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="https://github.com/JamieDavisDevBase">Github</a>
@@ -206,7 +206,7 @@
                         <textarea class="form-control bg-dark opacity-75 text-light" name="message"   id="message" rows="5"></textarea>
                     </div>
                     <div class="g-recaptcha" data-sitekey="6Le4xCodAAAAAH67AC5FziWI_mnCpOc6CHGVSpqb"></div>
-                    <button class="btn btn-warning d-flex border-3 border-dark mb-5" type="submit">Submit</button>
+                    <button id="submit" class="btn text-warning border-3 border-warning mb-5" type="submit">Submit</button>
                 </form>
                     <div id="output-area"></div>
             </div>
@@ -222,21 +222,22 @@
         <div class="row">
             <div class="col-4">
                 <a href="https://www.linkedin.com/in/jamie-davis-jddb/">
-                    <i class="icon fab fa-linkedin d-flex justify-content-center"></i>
+                    <i class="icon hover fab fa-linkedin d-flex justify-content-center"></i>
                 </a>
             </div>
             <div class="col-4">
                 <a href="https://stackoverflow.com/users/17182888/jamie-davis">
-                    <i class="icon fab fa-stack-overflow d-flex justify-content-center"></i>
+                    <i class="icon hover fab fa-stack-overflow d-flex justify-content-center"></i>
                 </a>
             </div>
             <div class="col-4">
                 <a href="https://github.com/JamieDavisDevBase">
-                    <i class="icon fab fa-github-square d-flex justify-content-center"></i>
+                    <i class="icon hover fab fa-github-square d-flex justify-content-center"></i>
                 </a>
             </div>
         </div>
     </div>
+
 
 
 <!-- Jquery and Bootstrap Dependencies -->

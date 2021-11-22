@@ -14,11 +14,26 @@ body {
     color: rgb(246, 193, 0);
     font-size: 80px;
     margin-bottom: 40px;
-
 }
-.icon:hover {
+
+/*Hover Links*/
+
+.hover:hover {
     color: dodgerblue;
-    font-size: 80px;
+}
+
+/*Hover Buttons*/
+
+#toggle:hover {
+    background-color: steelblue;
+}
+
+#resume:hover {
+    background-color: steelblue;
+}
+
+#submit:hover {
+    background-color: steelblue;
 }
 
 /*Icons*/
@@ -137,3 +152,5 @@ body {
 .navbar-dark .navbar-toggler {
     border: 3px solid rgb(246, 193, 0);
 }
+
+
