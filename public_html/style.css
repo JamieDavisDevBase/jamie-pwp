@@ -16,24 +16,8 @@ body {
     margin-bottom: 40px;
 }
 
-/*Hover Links*/
-
 .hover:hover {
     color: dodgerblue;
-}
-
-/*Hover Buttons*/
-
-#toggle:hover {
-    background-color: dodgerblue;
-}
-
-#resume:hover {
-    background-color: dodgerblue;
-}
-
-#submit:hover {
-    background-color: dodgerblue;
 }
 
 /*Icons*/
@@ -147,11 +131,29 @@ body {
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28246, 193, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-
 }
 
 .navbar-dark .navbar-toggler {
     border: 3px solid rgb(246, 193, 0);
+    box-shadow: none;
 }
 
+#toggle:hover {
+    background-color: dodgerblue;
+}
+
+/*Resume Button*/
+
+#resume {
+    box-shadow: none;
+}
+#resume:hover {
+    background-color: dodgerblue;
+}
+
+/*Submit Button*/
+
+#submit:hover {
+    background-color: dodgerblue;
+}
 
