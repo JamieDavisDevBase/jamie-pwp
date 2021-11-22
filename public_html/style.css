@@ -157,3 +157,7 @@ body {
     background-color: dodgerblue;
 }
 
+.alink:hover {
+    color: dodgerblue !important;
+}
+
