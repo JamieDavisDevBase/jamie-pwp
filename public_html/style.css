@@ -154,7 +154,7 @@ body {
 /*Submit Button*/
 
 #submit {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 #submit:hover {
