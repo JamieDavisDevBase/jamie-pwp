@@ -12,7 +12,7 @@ const {check, validationResult} = require("express-validator")
 const Mailgun = require("mailgun.js")
 const formData = require("form-data")
 const Recaptcha = require("express-recaptcha").RecaptchaV2
-require("dotenv").config()
+// require("dotenv").config()
 
 const app = express()
 const mailgun = new Mailgun(formData)

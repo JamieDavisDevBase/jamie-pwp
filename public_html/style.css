@@ -153,6 +153,10 @@ body {
 
 /*Submit Button*/
 
+#submit {
+    box-shadow: none;
+}
+
 #submit:hover {
     background-color: dodgerblue;
 }
