@@ -20,6 +20,12 @@ body {
     color: dodgerblue;
 }
 
+/*Top Links*/
+
+.alink:hover {
+    color: dodgerblue !important;
+}
+
 /*Icons*/
 
 .fa-js-square {
@@ -161,7 +167,5 @@ body {
     background-color: dodgerblue;
 }
 
-.alink:hover {
-    color: dodgerblue !important;
-}
+
 
