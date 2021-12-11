@@ -5,7 +5,7 @@ body{
     background-image: url("./imgs/forest.png");
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
 }
 
 /*Icon Links*/
