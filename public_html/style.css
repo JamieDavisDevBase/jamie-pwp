@@ -7,6 +7,13 @@ body{
     background-attachment: fixed;
     background-position: bottom;
 }
+@media (max-width: 768px) {
+    body{
+        background-image: url("./imgs/mdForest.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+}
 
 /*Icon Links*/
 
