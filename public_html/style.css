@@ -2,10 +2,10 @@
 /*Background*/
 
 body{
-    background-image: url("./imgs/mdForest.jpg");
+    background-image: url("imgs/newBackground.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: bottom right 35%;
 }
 
 /*Icon Links*/
